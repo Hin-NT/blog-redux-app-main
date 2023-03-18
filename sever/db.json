@@ -1,21 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "7 CSS tools you should be using",
-      "category": "development",
-      "subCategory": [
-        "frontend",
-        "ui/ux",
-        "design"
-      ],
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo ratione ipsa praesentium in, quisquam nulla saepe quia, quasi iste sapiente soluta. Optio recusandae repellendus quis modi provident eos iure?",
-      "authorName": "Jone Doe",
-      "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "createAt": "March 03, 2023",
-      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmaEiT-lSc0vzLGjQ_NeaE1LZtp8FLDoBGw&usqp=CAU"
-    },
-    {
       "id": 2,
       "title": "Milan Places That Highlight The City",
       "category": "travel",
@@ -44,6 +29,48 @@
       "createAt": "March 03, 2023",
       "cover": "https://files.fullstack.edu.vn/f8-prod/blog_posts/6558/63f57c3423886.jpg",
       "id": 3
+    },
+    {
+      "title": "Server-side rendering (SSR) & Client-side rendering (CSR) ?",
+      "category": "Developer",
+      "subCategory": [
+        "SSR",
+        "CSR"
+      ],
+      "description": "Server side rendering...",
+      "authorName": "Jone Doe",
+      "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "createAt": "14:57:02 18/3/2023",
+      "cover": "https://files.fullstack.edu.vn/f8-prod/blog_posts/5068/634273758a67b.jpg",
+      "id": 4
+    },
+    {
+      "title": "7 CSS tools you should be using",
+      "category": "development",
+      "subCategory": [
+        "frontend",
+        "ui/ux",
+        " design"
+      ],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo ratione ipsa praesentium in, quisquam nulla saepe quia, quasi iste sapiente soluta. Optio recusandae repellendus quis modi provident eos iure?",
+      "authorName": "Jone Doe",
+      "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "createAt": "14:59:12 18/3/2023",
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmaEiT-lSc0vzLGjQ_NeaE1LZtp8FLDoBGw&usqp=CAU",
+      "id": 5
+    },
+    {
+      "title": "Art & Perception",
+      "category": "art",
+      "subCategory": [
+        "design"
+      ],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo ratione ipsa praesentium in, quisquam nulla saepe quia, quasi iste sapiente soluta. Optio recusandae repellendus quis modi provident eos iure?",
+      "authorName": "Jone Doe",
+      "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "createAt": "15:05:25 18/3/2023",
+      "cover": "https://cdn.pixabay.com/photo/2016/09/20/18/49/brushes-1683134_960_720.jpg",
+      "id": 6
     }
   ]
 }

@@ -4,12 +4,22 @@ import http from "../utils/http";
 const initialState = {
   blogList: [],
   loading: false,
+  blogEdit: null,
 };
 
 const postReducer = createSlice({
   name: "blogList",
   initialState,
-  reducers: {},
+  reducers: {
+    editBlog: (state, action) => {
+      const getBlogByID =
+        state.blogList.find((blog) => blog.id === action.payload) || null;
+      state.blogEdit = getBlogByID;
+    },
+    cancelEdigBlog: (state) => {
+      state.blogEdit = null;
+    },
+  },
   extraReducers(builder) {
     builder
       .addCase(getBlogList.fulfilled, (state, action) => {
@@ -23,6 +33,16 @@ const postReducer = createSlice({
           (blog) => blog.id != action.payload
         );
         state.blogList = newBlogList;
+      })
+      .addCase(updateBlog.fulfilled, (state, action) => {
+        state.blogList.find((blog, index) => {
+          if (blog.id === action.payload.id) {
+            state.blogList[index] = action.payload;
+            return true;
+          }
+          return false;
+        });
+        state.blogEdit = null;
       })
       .addMatcher(
         // pending: khi đang chờ dữ liệu về
@@ -86,6 +106,15 @@ export const deleteBlog = createAsyncThunk(
       signal: thunkAPI.signal,
     });
     return id;
+  }
+);
+export const updateBlog = createAsyncThunk(
+  "blogs/updateBlog",
+  async (body, thunkAPI) => {
+    const response = await http.put(`posts/${body.id}`, body, {
+      signal: thunkAPI.signal,
+    });
+    return response.data;
   }
 );
 export default postReducer;

@@ -1,10 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteBlog } from "../../../../redux/post.reducer";
+import postReducer, { deleteBlog } from "../../../../redux/post.reducer";
 import Chip from "../../../common/Chip";
 import "./styles.css";
-
 const BlogItem = ({
   blog: {
     id,
@@ -20,6 +19,9 @@ const BlogItem = ({
   const dispatch = useDispatch();
   const handleDeleteBlog = () => {
     dispatch(deleteBlog(id));
+  };
+  const handleEditBlog = () => {
+    dispatch(postReducer.actions.editBlog(id));
   };
   return (
     <div className="blogItem-wrap">
@@ -58,6 +60,7 @@ const BlogItem = ({
           />
         </svg>
         <svg
+          onClick={handleEditBlog}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
