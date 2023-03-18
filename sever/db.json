@@ -4,7 +4,11 @@
       "id": 1,
       "title": "7 CSS tools you should be using",
       "category": "development",
-      "subCategory": ["frontend", "ui/ux", "design"],
+      "subCategory": [
+        "frontend",
+        "ui/ux",
+        "design"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo ratione ipsa praesentium in, quisquam nulla saepe quia, quasi iste sapiente soluta. Optio recusandae repellendus quis modi provident eos iure?",
       "authorName": "Jone Doe",
       "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -15,12 +19,57 @@
       "id": 2,
       "title": "Milan Places That Highlight The City",
       "category": "travel",
-      "subCategory": ["frontend", "ui/ux", "design"],
+      "subCategory": [
+        "frontend",
+        "ui/ux",
+        "design"
+      ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo ratione ipsa praesentium in, quisquam nulla saepe quia, quasi iste sapiente soluta. Optio recusandae repellendus quis modi provident eos iure?",
       "authorName": "Jone Doe",
       "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
       "createAt": "March 03, 2023",
       "cover": "https://images.pexels.com/photos/409127/pexels-photo-409127.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "title": "7 Soft skills programmers need to succeed",
+      "category": "Developer",
+      "subCategory": [
+        "IT",
+        "Blog",
+        "Skill"
+      ],
+      "description": "To become a good programmer, we not only need to hone our professional skills, but also need to equip more skills...",
+      "authorName": "Jone Doe",
+      "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "createAt": "March 03, 2023",
+      "cover": "https://files.fullstack.edu.vn/f8-prod/blog_posts/6558/63f57c3423886.jpg",
+      "id": 3
+    },
+    {
+      "title": "a",
+      "category": "a",
+      "subCategory": [
+        "a"
+      ],
+      "description": "a",
+      "authorName": "Jone Doe",
+      "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "createAt": "13:15:09 18/3/2023",
+      "cover": "a",
+      "id": 4
+    },
+    {
+      "title": "a",
+      "category": "a",
+      "subCategory": [
+        "a"
+      ],
+      "description": "a",
+      "authorName": "Jone Doe",
+      "authorAvatar": "https://images.pexels.com/photos/1646178/pexels-photo-1646178.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "createAt": "13:18:18 18/3/2023",
+      "cover": "a",
+      "id": 5
     }
   ]
 }

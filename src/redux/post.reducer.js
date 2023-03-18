@@ -15,8 +15,11 @@ const postReducer = createSlice({
       .addCase(getBlogList.fulfilled, (state, action) => {
         state.blogList = action.payload;
       })
+      .addCase(addBlog.fulfilled, (state, action) => {
+        state.blogList.push(action.payload);
+      })
       .addMatcher(
-        // khi đang chờ dữ liệu về
+        // pending: khi đang chờ dữ liệu về
         (action) => action.type.endsWith("/pending"),
         (state, action) => {
           state.loading = true;
@@ -24,6 +27,7 @@ const postReducer = createSlice({
         }
       )
       .addMatcher(
+        //rejected: sau khi lấy dữ liệu xong nhưng thất bại
         (action) => action.type.endsWith("/rejected"),
         (state, action) => {
           if (
@@ -36,6 +40,7 @@ const postReducer = createSlice({
         }
       )
       .addMatcher(
+        //fulfilled: sau khi lấy dữ liệu xong và thành công
         (action) => action.type.endsWith("/fulfilled"),
         (state, action) => {
           if (
@@ -49,10 +54,20 @@ const postReducer = createSlice({
       );
   },
 });
+// xử lí bất đồng bộ
 export const getBlogList = createAsyncThunk(
   "blogs/getBlogList",
   async (_, thunkAPI) => {
     const response = await http.get("posts", {
+      signal: thunkAPI.signal,
+    });
+    return response.data;
+  }
+);
+export const addBlog = createAsyncThunk(
+  "blogs/addBlog",
+  async (body, thunkAPI) => {
+    const response = await http.post("posts", body, {
       signal: thunkAPI.signal,
     });
     return response.data;
