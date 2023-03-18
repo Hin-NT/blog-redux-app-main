@@ -18,6 +18,12 @@ const postReducer = createSlice({
       .addCase(addBlog.fulfilled, (state, action) => {
         state.blogList.push(action.payload);
       })
+      .addCase(deleteBlog.fulfilled, (state, action) => {
+        const newBlogList = state.blogList.filter(
+          (blog) => blog.id != action.payload
+        );
+        state.blogList = newBlogList;
+      })
       .addMatcher(
         // pending: khi đang chờ dữ liệu về
         (action) => action.type.endsWith("/pending"),
@@ -71,6 +77,15 @@ export const addBlog = createAsyncThunk(
       signal: thunkAPI.signal,
     });
     return response.data;
+  }
+);
+export const deleteBlog = createAsyncThunk(
+  "blogs/deleteBlog",
+  async (id, thunkAPI) => {
+    const response = await http.delete(`posts/${id}`, {
+      signal: thunkAPI.signal,
+    });
+    return id;
   }
 );
 export default postReducer;
